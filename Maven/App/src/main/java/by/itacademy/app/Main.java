@@ -7,6 +7,7 @@ import by.itacademy.service.Calculation;
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
         List<Employee> employees = Repository.getEmployees();
         for (Employee employee : employees) {
