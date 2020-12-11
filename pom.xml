@@ -9,10 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>App</module>
-        <module>Calc</module>
-        <module>Entity</module>
-        <module>Repository</module>
+        <module>Maven</module>
     </modules>
 
     <build>
