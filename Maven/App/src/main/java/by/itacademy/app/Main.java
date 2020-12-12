@@ -10,10 +10,14 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+
         List<Employee> employees = RepositoryFactory.buildRepository().getEmployees();
         for (Employee employee : employees) {
-            var avarageSalary = Calculation.calcAvarageSalary(employee.getAccruedSalary(), 2020, 1, 12);
-            var basedOnSalary = Calculation.getSalariesInString(employee.getAccruedSalary(), 2020, 1, 12);
+            int year = 2020;
+            int startPeriod = 1;
+            int endPeriod = 12;
+            var avarageSalary = Calculation.calcAvarageSalary(employee.getAccruedSalary(), year, startPeriod, endPeriod);
+            var basedOnSalary = Calculation.getSalariesInString(employee.getAccruedSalary(), year, startPeriod, endPeriod);
             System.out.println(String.format("Employee %s has avarage salary %d, based on %s", employee.getName(), avarageSalary, basedOnSalary));
         }
     }
