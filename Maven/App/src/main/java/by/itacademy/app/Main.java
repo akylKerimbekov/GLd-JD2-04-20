@@ -1,6 +1,7 @@
 package by.itacademy.app;
 
 import by.itacademy.entity.Employee;
+import by.itacademy.repository.Repository;
 import by.itacademy.repository.RepositoryFactory;
 import by.itacademy.repository.cache.RepositoryCache;
 import by.itacademy.service.Calculation;
@@ -8,10 +9,9 @@ import by.itacademy.service.Calculation;
 import java.util.List;
 
 public class Main {
-
     public static void main(String[] args) {
-
-        List<Employee> employees = RepositoryFactory.buildRepository().getEmployees();
+        Repository repository = RepositoryFactory.buildRepository();
+        List<Employee> employees = repository.getEmployees();
         for (Employee employee : employees) {
             int year = 2020;
             int startPeriod = 1;
