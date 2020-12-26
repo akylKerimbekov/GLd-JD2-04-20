@@ -8,8 +8,17 @@
     <artifactId>JD2Maven</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <modules>
-        <module>Maven</module>
+        <module>app</module>
+        <module>core</module>
+        <module>entity</module>
+        <module>repository</module>
+        <module>config</module>
     </modules>
 
     <build>
