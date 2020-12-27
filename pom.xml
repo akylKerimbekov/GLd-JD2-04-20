@@ -13,12 +13,20 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <profile.name>dev</profile.name>
+            </properties>
+        </profile>
+    </profiles>
+
     <modules>
         <module>app</module>
-        <module>core</module>
-        <module>entity</module>
-        <module>repository</module>
-        <module>config</module>
+        <module>domain</module>
+        <module>infrastructure</module>
+        <module>conf</module>
     </modules>
 
     <build>
